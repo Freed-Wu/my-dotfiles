@@ -1,0 +1,31 @@
+$pdf_mode = 1;
+$pdflatex = 'lualatex -shell-escape -file-line-error -synctex=1 -interaction=nonstopmode %O %S';
+$recorder = 1;
+$preview_continuous_mode = 1;
+$pdf_update_method = 0;
+$pdf_previewer = 'xdg-open %S';
+$clean_ext = 'synctex(busy) synctex.gz acn acr alg aux bbl bcf blg brf fdb_latexmk glg glo gls idx ilg ind ist loe lof log lot out run.xml toc xdv dvi upa upb pygtex pygstyle pyg fls listing cmap csvtoken gnuplot nav snm vrb mw mw.mw fmt markdown.in nlo nls mx1 mx2';
+$bibtex_use = 2;
+add_cus_dep('nlo', 'nls', 0, 'makenlo2nls');
+sub makenlo2nls{
+	system( "makeindex -s nomencl.ist -o \"$_[0].nls\" \"$_[0].nlo\"" );
+}
+# $pdflatex = 'internal musixlatex %R %O %S'
+push @generated_exts,"mx2";
+push @generated_exts,"mx1";
+sub musixlatex {
+	my $root = shift;
+	my $mx = "$aux_dir1$root";
+	my @args = @_;
+	if ( $pass{$rule} <= 1 ) {
+		print "======= FIRST PASS: Deleting '$mx.mx2' =======\n";
+		unlink "$mx.mx2";
+		print "====   Generating '$mx.mx1' then '$mx.mx2' ===\n";
+		my $ret = system( "pdflatex @args" );
+		if ($ret) { return $ret; }
+		$ret = system( "musixflx $mx" );
+		if ($ret) { return $ret; }
+	}
+	return system( "pdflatex @args" );
+}
+

@@ -1,0 +1,4 @@
+#! /data/data/com.termux/files/usr/bin/zsh
+termux-wake-lock
+sshd
+pure-ftpd $PREFIX/etc/pure-ftpd.conf

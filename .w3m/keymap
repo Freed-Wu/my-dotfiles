@@ -1,0 +1,81 @@
+########## command ##########
+keymap :: COMMAND
+keymap :H HELP
+keymap :O OPTIONS
+keymap :d DOWNLOAD_LIST
+
+########## history navigation ##########
+keymap L NEXT
+keymap H PREV
+keymap :p SELECT_MENU
+keymap :h HISTORY
+
+########## scrolling ##########
+keymap C-e UP
+keymap C-y DOWN
+keymap gg BEGIN
+keymap C-d NEXT_PAGE
+keymap d NEXT_PAGE
+keymap C-u PREV_PAGE
+keymap u PREV_PAGE
+keymap zz CENTER_V
+########## cursor ##########
+keymap 0 LINE_BEGIN
+keymap $ LINE_END
+keymap gh LINE_BEGIN
+keymap gl LINE_END
+keymap w NEXT_WORD
+keymap b PREV_WORD
+########## cursor history ##########
+keymap C-i REDO
+keymap C-o UNDO
+########## navigation ##########
+keymap f MOVE_LIST_MENU
+keymap F LIST_MENU
+keymap C-n NEXT_LINK
+keymap C-p PREV_LINK
+keymap :l PEEK_LINK
+
+# reload
+keymap r RELOAD
+keymap r REDRAW
+keymap C-r RELOAD
+
+# save/load
+keymap :w SAVE
+keymap :W PRINT
+keymap :o GOTO
+keymap :e LOAD
+
+# jump
+keymap ESC-C-j SUBMIT
+keymap C-] TAB_LINK
+keymap C-j GOTO_LINK
+
+########## info ##########
+keymap y PEEK
+keymap gC-g INFO
+keymap C-g LINE_INFO
+keymap gf VIEW
+
+########## bookmarks ##########
+keymap m ADD_BOOKMARK
+keymap M VIEW_BOOKMARK
+
+########## tab ##########
+keymap x CLOSE_TAB
+keymap go GOTO http://www.bing.com
+keymap gO TAB_GOTO http://www.bing.com
+keymap C-t NEW_TAB
+keymap gt NEXT_TAB
+keymap gT PREV_TAB
+keymap C-wL TAB_RIGHT
+keymap C-wH TAB_LEFT
+keymap t TAB_GOTO
+keymap T TAB_MENU
+
+########## quit ##########
+keymap ZZ EXIT
+keymap C-Q EXIT
+keymap ZQ QUIT
+keymap :q QUIT

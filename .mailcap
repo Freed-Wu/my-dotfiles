@@ -1,0 +1,6 @@
+text/plain; iconv -f gbk -t utf-8 %s; test=echo "%{charset}" | grep -ic "gb2312"; copiousoutput
+text/html; w3m -dump -I $(echo %{charset} | sed s/gb2312/gbk/I) %s; nametemplate=%s.html; copiousoutput
+application/msword; antiword %s
+application/pdf; pdftotext %s -
+application/vnd.openxmlformats-officedocument.wordprocessingml.document; pandoc %s -t plain -o -
+application/vnd.ms-excel; ssconvert %s -

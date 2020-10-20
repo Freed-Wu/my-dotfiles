@@ -1,0 +1,28 @@
+set nocompatible
+set encoding=utf-8
+set undodir=$XDG_DATA_HOME/nvim/undo
+set directory=$XDG_DATA_HOME/nvim/swap
+if filereadable($HOME .. '/gVimPortableSettings.ini')
+	let &pythondll = $SYSTEMROOT .. '\System32\python27.dll'
+	let &pythonhome = $SYSTEMROOT .. '\System32'
+	let &pythonthreedll = v:progpath[0] .. ':/PortableApps/CommonFiles/python/python35.dll'
+	let &pythonthreehome = v:progpath[0] .. ':/PortableApps/CommonFiles/python'
+elseif has('win64')
+	let &pythondll = $SYSTEMROOT .. '\System32\python27.dll'
+	let &pythonhome = $SYSTEMROOT .. '\System32'
+	let &pythonthreedll = 'D:\Program Files\Python\Python37\python37.dll'
+	let &pythonthreehome = 'D:\Program Files\Python\Python37'
+elseif has('win32')
+	let &pythondll = $SYSTEMROOT .. '\SysWOW64\python27.dll'
+	let &pythonhome = $SYSTEMROOT .. '\SysWOW64'
+	let &pythonthreedll = 'D:\Program Files(x86)\Python\Python37\python37.dll'
+	let &pythonthreehome = 'D:\Program Files(x86)\Python\Python37'
+elseif has('win32unix')
+	set pythondll=/c/Windows/SysWOW64/python27.dll
+	set pythonhome=/c/Windows/SysWOW64
+	let &pythonthreedll = '\d\Program Files(x86)\Python\Python37\python37.dll'
+	let &pythonthreehome = '\d\Program Files(x86)\Python\Python37'
+endif
+let $MYVIMRC = $XDG_CONFIG_HOME .. '/nvim/init.vim'
+source $MYVIMRC
+

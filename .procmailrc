@@ -1,0 +1,7 @@
+MAILDIR=${XDG_DATA_HOME:-$HOME/.local/share}/mail
+DEFAULT=$MAILDIR/inbox
+LOGFILE=${XDG_CACHE_HOME:-$HOME/.cache/procmail.log}
+
+:0:
+inbox/
+

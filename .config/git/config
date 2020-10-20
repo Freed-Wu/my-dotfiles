@@ -1,0 +1,34 @@
+[user]
+	name = Freed-Wu
+	email = Wuzy01@qq.com
+	signingkey = A92B02E693A6EEAF713F432DD8B56C1C204A49E4
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[pull]
+	rebase = true
+[push]
+	tags = true
+[describe]
+	tags = true
+[receive]
+	denyCurrentBranch = ignore
+[merge]
+	conflictstyle = diff3
+	tool = vimdiff
+[rerere]
+	enabled = true
+[diff]
+	submodule = log
+	tool = vimdiff
+[status]
+	submodulesummary = 1
+[submodule]
+	recurse = true
+[credential]
+	helper = store --file $XDG_DATA_HOME/git-credentials
+[core]
+	autocrlf = input
+	excludesfile = /home/wzy/.config/git/.gitignore_global

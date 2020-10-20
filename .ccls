@@ -1,0 +1,10 @@
+{
+	"cache": {
+		"directory": "/tmp/ccls-cache",
+		"format": "binary"
+	},
+	"diagnostics": {
+		"onOpen": 0,
+		"opChange": 1000
+	}
+}

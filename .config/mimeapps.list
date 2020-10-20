@@ -1,0 +1,33 @@
+[Default Applications]
+text/plain=nvim.desktop
+text/html=firefox.desktop
+image/vnd.microsoft.icon=firefox.desktop
+image/vnd.djvu=org.pwmt.zathura-djvu.desktop
+image/bmp=shotwell-viewer.desktop;
+image/gif=shotwell-viewer.desktop;
+image/png=shotwell-viewer.desktop;
+image/jpeg=shotwell-viewer.desktop;
+x-scheme-handler/mailto=userapp-Evolution-USXNK0.desktop
+x-scheme-handler/http=firefox.desktop
+x-scheme-handler/https=firefox.desktop
+x-scheme-handler/about=firefox.desktop
+x-scheme-handler/unknown=firefox.desktop
+x-scheme-handler/baiduyunguanjia=baidunetdisk.desktop
+x-scheme-handler/ftp=firefox.desktop
+x-scheme-handler/http=firefox.desktop
+x-scheme-handler/https=firefox.desktop
+x-scheme-handler/chrome=google-chrome.desktop
+application/x-extension-htm=firefox.desktop
+application/x-extension-html=firefox.desktop
+application/x-extension-shtml=firefox.desktop
+application/x-extension-xhtml=firefox.desktop
+application/x-extension-xht=firefox.desktop
+application/xhtml+xml=firefox.desktop
+application/x-ms-dos-executable=wine-staging.desktop
+application/pdf=org.pwmt.zathura-pdf-poppler.desktop
+application/vnd.ms-htmlhelp=xchm.desktop
+application/postscript=org.pwmt.zathura-ps.desktop
+application/oxps=org.pwmt.zathura-pdf-mupdf.desktop
+application/epub+zip=org.pwmt.zathura-pdf-mupdf.desktop
+
+[Added Associations]

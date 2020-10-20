@@ -1,0 +1,24 @@
+[submodule ".emacs.d"]
+	path = .emacs.d
+	url = https://github.com/syl20bnr/spacemacs
+[submodule ".config/neomutt/mutt_color_themes"]
+	path = .config/neomutt/mutt_color_themes
+	url = https://github.com/d3ckard/mutt_color_themes
+[submodule ".config/neomutt/mutt-colors-solarized"]
+	path = .config/neomutt/mutt-colors-solarized
+	url = https://github.com/altercation/mutt-colors-solarized
+[submodule ".config/neomutt/mutt-colors-neonwolf"]
+	path = .config/neomutt/mutt-colors-neonwolf
+	url = https://github.com/h3xx/mutt-colors-neonwolf
+[submodule ".config/zathura/zathura-gruvbox"]
+	path = .config/zathura/zathura-gruvbox
+	url = https://github.com/rwrr/zathura-gruvbox
+[submodule ".config/zathura/zathura-solarized"]
+	path = .config/zathura/zathura-solarized
+	url = https://github.com/lennonwoo/zathura-solarized
+[submodule ".local/share/icons/Windows-10"]
+	path = .local/share/icons/Windows-10
+	url = https://github.com/B00merang-Artwork/Windows-10
+[submodule ".local/share/themes/Windows-10"]
+	path = .local/share/themes/Windows-10
+	url = https://github.com/B00merang-Project/Windows-10

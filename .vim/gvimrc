@@ -1,0 +1,11 @@
+scriptencoding utf-8
+set guioptions=gt
+let &guifont = g:guifonts[localtime() % len(g:guifonts)]
+augroup init_titlestring "{{{
+	autocmd!
+	autocmd Filetype * let &titlestring = '%<%F ' . get(g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols, &filetype, '') . '%=%P' . get(g:, airline_symbols.linenr, 'Ξ') . '%l/%L' . get(g:, 'airline_symbols.maxlinenr', '')
+augroup END "}}}
+if has('win32')
+	simalt ~x
+endif
+

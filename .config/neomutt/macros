@@ -1,0 +1,1 @@
+macro pager f <pipe-entry>'extract_url'<enter> 'Follow links with urlview'

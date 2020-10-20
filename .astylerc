@@ -1,0 +1,46 @@
+# Brace Style Options:
+style=kr
+# Tab Options:
+indent=force-tab
+# Brace Modify Options:
+attach-namespaces
+attach-classes
+attach-inlines
+attach-extern-c
+attach-closing-while
+# Indentation Options:
+indent-classes
+indent-modifiers
+indent-switches
+indent-cases
+indent-namespaces
+indent-after-parens
+indent-continuation=4
+indent-labels
+indent-preproc-block
+indent-preproc-cond
+indent-preproc-define
+indent-col1-comments
+min-conditional-indent=2
+max-continuation-indent=40
+# Padding Options:
+break-blocks=all
+pad-oper
+pad-comma
+pad-paren-in
+pad-header
+unpad-paren
+delete-empty-lines
+align-pointer=type
+align-reference=type
+# Formatting Options:
+remove-braces
+attach-return-type-decl
+# Other Options:
+errors-to-stdout
+preserve-date
+verbose
+formatted
+quiet
+lineend=windows
+

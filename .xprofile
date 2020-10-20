@@ -1,0 +1,27 @@
+if [[ `uname -o` == 'Msys' ]]; then
+	export SHELL=/bin/zsh
+elif [[ `uname -o` == 'Android' ]]; then
+	source ~/.termux/boot/zshrc
+fi
+# system
+export PATH=$HOME/.local/bin:$HOME/.cabal/bin:$HOME/go/bin:$HOME/.gem/ruby/2.7.0/bin:$PATH
+export CACA_DRIVER=ncurses
+export EDITOR=/usr/bin/vi
+export PAGER='/usr/bin/vi -c PAGER -'
+export MANPAGER='/usr/bin/vi -c MANPAGER -'
+# xdg
+export XDG_CONFIG_HOME=$HOME/.config
+export XDG_DATA_HOME=$HOME/.local/share
+export XDG_CACHE_HOME=$HOME/.cache
+export WAKATIME_HOME=$XDG_DATA_HOME/nvim
+export GNUPGHOME=$XDG_CONFIG_HOME/gnupg
+# vim
+export GITHUBWORKSPACE=$HOME/.vim/repos/github.com
+# zsh
+export ZSH=$HOME/.zinit/plugins/ohmyzsh---ohmyzsh
+# julia
+export JULIA_NUM_THREADS=4
+export JULIA_PKG_SERVER=https://kr.pkg.julialang.org
+export GKS_ENCODING=utf-8
+# python
+export PYTHONSTARTUP=$HOME/.ipython/profile_default/startup/00-first.py

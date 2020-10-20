@@ -1,0 +1,71 @@
+source `echo $XDG_CONFIG_HOME`/neomutt/mutt-colors-solarized/mutt-colors-solarized-dark-256.muttrc
+
+set use_from = yes
+set envelope_from = yes
+set move = yes
+set include
+set charset = 'utf-8'
+set ascii_chars = yes
+set quit = ask-yes
+set edit_headers = yes
+set mbox_type = Maildir
+set rfc2047_parameters = yes
+set sort = reverse-date
+set indent_str = '> '
+set sidebar_visible = yes
+auto_view text/html application/msword application/pdf application/vnd.openxmlformats-officedocument.wordprocessingml.document application/vnd.ms-excel
+
+set sendmail = '/usr/bin/msmtp'
+set realname = `git config --global user.name`
+set from = `git config --global user.email`
+
+set folder = `echo ${XDG_DATA_HOME:-$HOME/.local/share}/mail`
+set mbox = +mbox
+set spoolfile = +inbox
+set record = +sent
+set postponed = +drafts
+mailboxes +inbox +mbox +drafts +sent
+
+# Moving around
+bind attach,browser,index g noop
+bind attach,browser,index gg first-entry
+bind attach,browser,index G last-entry
+bind pager g noop
+bind pager gg top
+bind pager G bottom
+bind pager k previous-line
+bind pager j next-line
+
+# Scrolling
+bind attach,browser,pager,index D next-page
+bind attach,browser,pager,index U previous-page
+bind attach,browser,pager,index u half-up
+bind attach,browser,pager,index d half-down
+bind browser,pager \Ce next-line
+bind browser,pager \Cy previous-line
+bind index \Ce next-line
+bind index \Cy previous-line
+
+bind pager,index x noop
+bind pager,index X delete-message
+
+# Mail & Reply
+bind index gp list-reply # Doesn't work currently
+
+# Threads
+bind browser,pager,index N search-opposite
+bind pager,index xT delete-thread
+bind pager,index xt delete-subthread
+bind pager,index gt next-thread
+bind pager,index gT previous-thread
+bind index za collapse-thread
+bind index zA collapse-all # Missing :folddisable/foldenable
+
+bind index,pager \Cp sidebar-prev
+bind index,pager \Cn sidebar-next
+bind index,pager \Co sidebar-open
+bind index,pager \Cu sidebar-page-up
+bind index,pager \Cd sidebar-page-down
+bind index,pager \Cb sidebar-prev-new
+bind index,pager \Cf sidebar-next-new
+bind index,pager 0 sidebar-toggle-visible
